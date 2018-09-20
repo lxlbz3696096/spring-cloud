@@ -1,24 +1,23 @@
 server:
-   port: 8180
-
+   port: 8381
+      
 spring:
    application:
       name: config-server
-      
-spring:
    cloud:
-      server:
-         git:
-            uri:
-            searchPaths: config-repo
-            username: 
-            password: 
-         lable: master
+      config:
+         server:
+            git:
+               uri: https://github.com/lxlbz3696096/spring-cloud
+               searchPaths: config-repo
+               username: lxlbz3696096
+               password: liuxulbz3696096
+         label: master
          
 eureka:
    client:
       serviceUrl:
-         defaultZone: http://localhost:8888/eureka/
+         defaultZone: http://localhost:8380/eureka/
          
   
    
