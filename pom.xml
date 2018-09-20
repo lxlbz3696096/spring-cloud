@@ -17,6 +17,7 @@
   
   <modules>
     <module>lx-config</module>
+    <module>lx-registry</module>
   </modules>
   
   <properties>
