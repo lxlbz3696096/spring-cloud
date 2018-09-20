@@ -18,6 +18,7 @@
   <modules>
     <module>lx-config</module>
     <module>lx-registry</module>
+    <module>lx-user-service</module>
   </modules>
   
   <properties>

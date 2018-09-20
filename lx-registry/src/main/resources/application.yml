@@ -1,9 +1,11 @@
 server:
-   port: 8180
+   port: 8380
    
 spring:
    application:
       name: registry
+
+eureka:
    instance:
       hostname: localhost
       #表示将自己的IP注册到Eureka Server
@@ -15,5 +17,5 @@ spring:
       fetchRegistry: false
       #服务注册中心的配置内容，指定服务注册中心的位置
       service-url:
-         defaultZone: http://localhost:8180/eureka/
+         defaultZone: http://localhost:8380/eureka/
       
