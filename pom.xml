@@ -19,6 +19,7 @@
     <module>lx-config</module>
     <module>lx-registry</module>
     <module>lx-user-service</module>
+    <module>lx-order-service</module>
   </modules>
   
   <properties>

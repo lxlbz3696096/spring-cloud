@@ -1,7 +1,8 @@
 package com.prometheus.application.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,8 +14,13 @@ public class UserController {
 	@Autowired
 	RegistryService registryService;
 	
-    @RequestMapping("/regist")
+    @PostMapping("/regist")
     public String userRegistry(@RequestParam String name) {
         return registryService.userRegistry(name);
+    }
+    
+    @GetMapping("/user")
+    public String user(@RequestParam String name){
+    	return "User info is name: "+name;
     }
 }
