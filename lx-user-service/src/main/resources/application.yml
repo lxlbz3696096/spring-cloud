@@ -1,10 +1,22 @@
-server:
-  port: 8382
-#服务名称
-spring:
-  application:
-    name: user-service
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8380/eureka/
+      
+server:
+  port: 8382
+  
+spring:
+  application:
+     name: user-service
+  datasource:
+     url: jdbc:mysql://localhost:3306/local_db_0
+     username: root
+     password: root
+     driver-class-name: com.mysql.jdbc.Driver
+     
+mybatis:
+   #mybatis.typeAliasesPackage扫描实体类位置
+   typeAliasesPackage: com.prometheus.application.mapper
+   #mybatis.mapperLocations扫描mybatis的xml文件
+   mapperLocations: classpath:mapper/*.xml

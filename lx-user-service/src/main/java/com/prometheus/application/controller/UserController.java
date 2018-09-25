@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.prometheus.application.model.TUser0;
 import com.prometheus.application.service.RegistryService;
 
 @RestController
@@ -15,12 +16,14 @@ public class UserController {
 	RegistryService registryService;
 	
     @PostMapping("/regist")
-    public String userRegistry(@RequestParam String name) {
-        return registryService.userRegistry(name);
+    public String userRegistry(@RequestParam String name, @RequestParam Integer age) {
+        registryService.userRegistry(name, age);
+        return "Registry success";
     }
     
     @GetMapping("/user")
-    public String user(@RequestParam String name){
-    	return "User info is name: "+name;
+    public TUser0 user(@RequestParam String name){
+    	TUser0 tUser0 = registryService.userInfos(name);
+    	return tUser0;
     }
 }
