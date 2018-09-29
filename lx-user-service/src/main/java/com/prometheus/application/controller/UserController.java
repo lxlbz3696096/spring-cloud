@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.prometheus.application.model.TUser0;
+import com.prometheus.application.model.User;
 import com.prometheus.application.service.RegistryService;
 
 @RestController
@@ -22,8 +22,8 @@ public class UserController {
     }
     
     @GetMapping("/user")
-    public TUser0 user(@RequestParam String name){
-    	TUser0 tUser0 = registryService.userInfos(name);
-    	return tUser0;
+    public User user(@RequestParam String name){
+    	User user = registryService.userInfos(name);
+    	return user;
     }
 }

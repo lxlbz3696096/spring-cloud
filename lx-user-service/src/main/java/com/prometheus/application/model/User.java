@@ -1,6 +1,14 @@
 package com.prometheus.application.model;
 
-public class TUser0 {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="t_user")
+public class User {
+	
+	@Id
     private Integer id;
 
     private Integer userId;
