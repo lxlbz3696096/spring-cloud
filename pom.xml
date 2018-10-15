@@ -20,23 +20,40 @@
     <module>lx-registry</module>
     <module>lx-user-service</module>
     <module>lx-order-service</module>
+    <module>lx-monitor</module>
   </modules>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
     <spring.cloud.version>Dalston.SR4</spring.cloud.version>
+    <spring-boot-admin.version>1.5.4</spring-boot-admin.version>
   </properties>
   
   <dependencyManagement>
   	<dependencies>
-	  <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-dependencies</artifactId>
-        <version>${spring.cloud.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
+  		<dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-server</artifactId>
+            <version>${spring-boot-admin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-server-ui</artifactId>
+            <version>${spring-boot-admin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-server-ui-login</artifactId>
+            <version>${spring-boot-admin.version}</version>
+        </dependency>
+	  	<dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-dependencies</artifactId>
+	        <version>${spring.cloud.version}</version>
+	        <type>pom</type>
+	        <scope>import</scope>
+      	</dependency>
   	</dependencies>
   </dependencyManagement>
   
