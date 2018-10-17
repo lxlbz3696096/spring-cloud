@@ -1,0 +1,15 @@
+eureka:
+   instance:
+      hostname: localhost
+      prefer-ip-address: true
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:8380/eureka/
+spring:
+   application:
+      name: lx-user-service
+   cloud:
+      config:
+         discovery:
+            enabled: true
+            service-id: config-server

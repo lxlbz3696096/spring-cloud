@@ -1,3 +1,11 @@
+eureka:
+   instance:
+      hostname: localhost
+      prefer-ip-address: true
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:8380/eureka/
+         
 server:
    port: 8381
       
@@ -9,15 +17,12 @@ spring:
          server:
             git:
                uri: https://github.com/lxlbz3696096/spring-cloud
-               searchPaths: config-repo
+               searchPaths: lx-config-repo
                username: lxlbz3696096
                password: liuxulbz3696096
          label: master
          
-eureka:
-   client:
-      serviceUrl:
-         defaultZone: http://localhost:8380/eureka/
-         
-  
-   
+security:
+   user:
+      name: config
+      password: ${CONFIG_SERVER_PASSWORD:config}
