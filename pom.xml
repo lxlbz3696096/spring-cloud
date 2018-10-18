@@ -21,6 +21,7 @@
     <module>lx-user-service</module>
     <module>lx-order-service</module>
     <module>lx-monitor</module>
+    <module>lx-config-client</module>
   </modules>
   
   <properties>

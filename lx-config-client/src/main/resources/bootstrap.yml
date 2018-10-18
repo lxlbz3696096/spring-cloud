@@ -7,10 +7,9 @@ eureka:
          defaultZone: http://localhost:8380/eureka/
 spring:
    application:
-      name: user-service
+      name: lx-config-client
    cloud:
       config:
          discovery:
             enabled: true
             service-id: config-server
-         profile: dev
