@@ -1,4 +1,4 @@
-package com.prometheus;
+package com.prometheus.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
