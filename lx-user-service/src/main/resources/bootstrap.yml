@@ -5,6 +5,9 @@ eureka:
    client:
       serviceUrl:
          defaultZone: http://localhost:8380/eureka/
+server:
+   port: 8382
+
 spring:
    application:
       name: user-service
@@ -13,4 +16,3 @@ spring:
          discovery:
             enabled: true
             service-id: config-server
-         profile: dev
