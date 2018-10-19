@@ -8,10 +8,11 @@ eureka:
          
 server:
    port: 8382
-   
 spring:
    application:
       name: config-client
+   profiles:
+      active: env
    cloud:
       config:
          discovery:

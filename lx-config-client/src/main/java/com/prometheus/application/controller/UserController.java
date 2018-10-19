@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
     
-    @Value("${server.port}")
-    private String port;
+    @Value("${spring.datasource.master.password}")
+    private String password;
 
-    @GetMapping("/info")
+    @GetMapping("/getProperties")
     public String getProperties(){
-        return "Info is ------ " + port;
+        return "Info is ------ " + password;
     }
 
 }
