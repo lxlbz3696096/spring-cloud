@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
     
-    @Value("${spring.application}")
+    @Value("${server.application}")
     private String application;
 
     @GetMapping("/getProperties")

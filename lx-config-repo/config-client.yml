@@ -1,5 +1,3 @@
 server:
    port: 8382
-  
-spring:
    application: user-service
