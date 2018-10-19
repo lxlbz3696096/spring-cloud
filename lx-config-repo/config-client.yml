@@ -1,4 +1,9 @@
+server:
+   port: 8382
+  
 spring:
+   application:
+      name: user-service
    datasource:
       type: com.alibaba.druid.pool.DruidDataSource
       # 下面为连接池的补充设置，应用到上面所有数据源中

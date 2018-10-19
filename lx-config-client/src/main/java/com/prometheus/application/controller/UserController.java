@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
     
-    @Value("${spring.datasource.master.driver-class-name}")
+    @Value("${server.port}")
     private String port;
 
     @GetMapping("/info")
     public String getProperties(){
-        return "Info is-------" + port;
+        return "Info is ------ " + port;
     }
 
 }
