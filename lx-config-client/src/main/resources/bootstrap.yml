@@ -11,10 +11,9 @@ server:
    
 spring:
    application:
-      name: client
+      name: config-client
    cloud:
       config:
          discovery:
             enabled: true
             service-id: config-server
-         profile: dev
