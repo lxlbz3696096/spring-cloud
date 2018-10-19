@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
     
-    @Value("${spring.datasource.master.password}")
-    private String password;
+    @Value("${spring.application}")
+    private String application;
 
     @GetMapping("/getProperties")
     public String getProperties(){
-        return "Info is ------ " + password;
+        return "Info is ------ " + application;
     }
 
 }
