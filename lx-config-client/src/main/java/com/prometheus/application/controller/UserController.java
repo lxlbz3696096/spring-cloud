@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
     
-    @Value("${server.application}")
-    private String application;
+    @Value("${spring.datasource.master.driver-class-name}")
+    private String driverClassName;
 
     @GetMapping("/getProperties")
     public String getProperties(){
-        return "Info is ------ " + application;
+        return "Info is ------ " + driverClassName;
     }
 
 }

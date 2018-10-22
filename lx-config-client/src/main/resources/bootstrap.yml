@@ -1,20 +1,11 @@
-eureka:
-   instance:
-      hostname: localhost
-      prefer-ip-address: true
-   client:
-      serviceUrl:
-         defaultZone: http://localhost:8380/eureka/
-         
 server:
    port: 8382
 spring:
    application:
       name: config-client
-   profiles:
-      active: env
    cloud:
       config:
-         discovery:
-            enabled: true
-            service-id: config-server
+         uri: http://localhost:8888
+         fail-fast: true
+         username: config
+         password: ${CONFIG_SERVER_PASSWORD:config}
